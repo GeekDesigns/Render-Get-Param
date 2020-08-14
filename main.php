@@ -1,9 +1,9 @@
-<?php
+<?php			
 
 function render_get_params($atts) {
 	if($atts['tag'] && $atts['key']) {
-		$tag = $atts['tag'];
-		$value = $_GET[$atts['key']];
+		$tag = $atts['tag'] ?? 'span';
+		$value = $_GET[$atts['key']] ?? '';
 		$prefix = $atts['prefix'];
 		$suffix = $atts['suffix'];
 		if($atts['align']) {
